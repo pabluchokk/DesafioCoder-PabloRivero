@@ -1,0 +1,11 @@
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\bin\Debug\net8.0\SistemaGestionEntities.deps.json
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\bin\Debug\net8.0\SistemaGestionEntities.dll
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\bin\Debug\net8.0\SistemaGestionEntities.pdb
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\SistemaGestionEntities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\SistemaGestionEntities.AssemblyInfoInputs.cache
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\SistemaGestionEntities.AssemblyInfo.cs
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\SistemaGestionEntities.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\SistemaGestionEntities.dll
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\refint\SistemaGestionEntities.dll
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\SistemaGestionEntities.pdb
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\ref\SistemaGestionEntities.dll

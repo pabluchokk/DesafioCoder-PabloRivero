@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "SistemaGestionData/1.0.0": {
+        "dependencies": {
+          "SistemaGestionEntities": "1.0.0"
+        },
+        "runtime": {
+          "SistemaGestionData.dll": {}
+        }
+      },
+      "SistemaGestionEntities/1.0.0": {
+        "runtime": {
+          "SistemaGestionEntities.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SistemaGestionData/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SistemaGestionEntities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
