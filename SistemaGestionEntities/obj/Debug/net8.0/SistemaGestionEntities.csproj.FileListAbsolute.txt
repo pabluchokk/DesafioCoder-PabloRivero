@@ -9,3 +9,4 @@ C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\refint\SistemaGestionEntities.dll
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\SistemaGestionEntities.pdb
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\ref\SistemaGestionEntities.dll
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionEntities\obj\Debug\net8.0\SistemaGestionEntities.sourcelink.json

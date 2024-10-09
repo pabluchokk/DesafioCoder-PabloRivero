@@ -15,3 +15,4 @@ C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionBussiness\obj\Debug\net8.0
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionBussiness\obj\Debug\net8.0\refint\SistemaGestionBussiness.dll
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionBussiness\obj\Debug\net8.0\SistemaGestionBussiness.pdb
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionBussiness\obj\Debug\net8.0\ref\SistemaGestionBussiness.dll
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionBussiness\obj\Debug\net8.0\SistemaGestionBussiness.sourcelink.json

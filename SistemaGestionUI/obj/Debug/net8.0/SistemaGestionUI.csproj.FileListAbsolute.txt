@@ -20,3 +20,4 @@ C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionUI\obj\Debug\net8.0\refint
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionUI\obj\Debug\net8.0\SistemaGestionUI.pdb
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionUI\obj\Debug\net8.0\SistemaGestionUI.genruntimeconfig.cache
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionUI\obj\Debug\net8.0\ref\SistemaGestionUI.dll
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionUI\obj\Debug\net8.0\SistemaGestionUI.sourcelink.json

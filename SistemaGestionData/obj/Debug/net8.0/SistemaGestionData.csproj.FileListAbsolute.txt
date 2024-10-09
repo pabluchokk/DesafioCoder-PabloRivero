@@ -13,3 +13,4 @@ C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\Sist
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\refint\SistemaGestionData.dll
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\SistemaGestionData.pdb
 C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\ref\SistemaGestionData.dll
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\SistemaGestionData.sourcelink.json
