@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SistemaGestionBusiness;
 using SistemaGestionData;
 using SistemaGestionEntities;
 
@@ -35,11 +36,10 @@ public class ProductoVendidoController : ControllerBase
         return Ok(productosVendidos);
     }
 
-    [HttpGet("ObtenerProductoVendido/{id}")]
-    public IActionResult ObtenerProductoVendido(int id)
+    [HttpGet("ObtenerProductosVendidos")]
+    public IActionResult ObtenerProductosVendidos()
     {
-        var productoVendido = ProductoVendidoData.ObtenerProductoVendido(id);
-        if (productoVendido == null) return NotFound("Producto vendido no encontrado.");
-        return Ok(productoVendido);
+        var productosVendidos = ProductoVendidoBusiness.ListarProductosVendidos();
+        return Ok(productosVendidos);
     }
 }

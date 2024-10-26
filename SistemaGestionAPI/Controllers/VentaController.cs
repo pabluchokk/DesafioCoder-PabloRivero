@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SistemaGestionBusiness;
 using SistemaGestionData;
 using SistemaGestionEntities;
 
@@ -11,7 +12,7 @@ public class VentaController : ControllerBase
     {
         if (productoVendidos == null || productoVendidos.Count == 0 || idUsuario <= 0)
         {
-            return BadRequest("Datos de la venta incorrectos");
+            return BadRequest("Datos de la venta incorrectos.");
         }
 
         var nuevaVenta = new Venta
@@ -19,7 +20,7 @@ public class VentaController : ControllerBase
             IdUsuario = idUsuario,
             Comentarios = "Venta realizada"
         };
-        VentaData.CrearVenta(nuevaVenta);
+        VentaBusiness.CrearVenta(nuevaVenta);
 
         foreach (var productoVendido in productoVendidos)
         {
@@ -36,35 +37,51 @@ public class VentaController : ControllerBase
             producto.Stock -= productoVendido.Cantidad;
             ProductoData.ModificarProducto(producto);
         }
-        return Ok("Venta creada correctamente");
+        return Ok("Venta creada correctamente.");
     }
 
     [HttpPut("ModificarVenta/{id}")]
     public IActionResult ModificarVenta(int id, [FromBody] Venta venta)
     {
-        venta.Id = id;
-        VentaData.ModificarVenta(venta);
+        if (venta == null || id != venta.Id)
+        {
+            return BadRequest("Datos de la venta incorrectos.");
+        }
+
+        var ventaExistente = VentaData.ObtenerVenta(id);
+        if (ventaExistente == null)
+        {
+            return NotFound("Venta no encontrada.");
+        }
+
+        VentaBusiness.ModificarVenta(venta);
         return Ok("Venta modificada correctamente.");
     }
 
     [HttpDelete("EliminarVenta/{id}")]
     public IActionResult EliminarVenta(int id)
     {
-        VentaData.EliminarVenta(id);
+        var ventaExistente = VentaData.ObtenerVenta(id);
+        if (ventaExistente == null)
+        {
+            return NotFound("Venta no encontrada.");
+        }
+
+        VentaBusiness.EliminarVenta(id);
         return Ok("Venta eliminada correctamente.");
     }
 
     [HttpGet("ListarVentas")]
     public IActionResult ListarVentas()
     {
-        var ventas = VentaData.ListarVentas();
+        var ventas = VentaBusiness.ListarVentas();
         return Ok(ventas);
     }
 
     [HttpGet("ObtenerVenta/{id}")]
     public IActionResult ObtenerVenta(int id)
     {
-        var venta = VentaData.ObtenerVenta(id);
+        var venta = VentaBusiness.ObtenerVenta(id);
         if (venta == null) return NotFound("Venta no encontrada.");
         return Ok(venta);
     }

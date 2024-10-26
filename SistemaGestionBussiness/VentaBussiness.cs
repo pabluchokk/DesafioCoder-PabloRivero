@@ -10,17 +10,14 @@ namespace SistemaGestionBusiness
         {
             return VentaData.ObtenerVenta(id);
         }
-
         public static List<Venta> ListarVentas()
         {
             return VentaData.ListarVentas();
         }
-
         public static void CrearVenta(Venta venta)
         {
             VentaData.CrearVenta(venta);
         }
-
         public static void ModificarVenta(Venta venta)
         {
             VentaData.ModificarVenta(venta);

@@ -16,19 +16,43 @@ namespace SistemaGestionBusiness
             return ProductoData.ListarProductos();
         }
 
-        public static void CrearProducto(Producto producto)
+        public static bool CrearProducto(Producto producto)
         {
+            if (producto == null || string.IsNullOrEmpty(producto.Descripcion) || producto.Costo <= 0 || producto.PrecioVenta <= 0)
+            {
+                return false;
+            }
             ProductoData.CrearProducto(producto);
+            return true;
         }
 
-        public static void ModificarProducto(Producto producto)
+        public static bool ModificarProducto(Producto producto)
         {
+            if (producto == null || producto.Id <= 0 || string.IsNullOrEmpty(producto.Descripcion) || producto.Costo <= 0 || producto.PrecioVenta <= 0)
+            {
+                return false;
+            }
+
+            var productoExistente = ProductoData.ObtenerProducto(producto.Id);
+            if (productoExistente == null)
+            {
+                return false;
+            }
+
             ProductoData.ModificarProducto(producto);
+            return true;
         }
 
-        public static void EliminarProducto(int id)
+        public static bool EliminarProducto(int id)
         {
+            var productoExistente = ProductoData.ObtenerProducto(id);
+            if (productoExistente == null)
+            {
+                return false;
+            }
+
             ProductoData.EliminarProducto(id);
+            return true;
         }
     }
 }

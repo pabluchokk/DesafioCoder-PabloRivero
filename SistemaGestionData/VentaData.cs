@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using SistemaGestionEntities;
 
@@ -6,24 +7,63 @@ namespace SistemaGestionData
 {
     public static class VentaData
     {
-        private static List<Venta> ventas = new List<Venta>();
-
-        public static Venta ObtenerVenta(int id)
-        {
-            return ventas.FirstOrDefault(v => v.Id == id);
-        }
-
+        private static string connectionString = "cadena_de_conexion";
         public static List<Venta> ListarVentas()
         {
+            var ventas = new List<Venta>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM Ventas", connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ventas.Add(new Venta
+                    {
+                        Id = (int)reader["Id"],
+                        Comentarios = reader["Comentarios"].ToString(),
+                        IdUsuario = (int)reader["IdUsuario"]
+                    });
+                }
+            }
             return ventas;
         }
-
         public static void CrearVenta(Venta venta)
         {
-            venta.Id = ventas.Count > 0 ? ventas.Max(v => v.Id) + 1 : 1; 
-            ventas.Add(venta);
-        }
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "INSERT INTO Ventas (Comentarios, IdUsuario) VALUES (@Comentarios, @IdUsuario)";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Comentarios", venta.Comentarios);
+                command.Parameters.AddWithValue("@IdUsuario", venta.IdUsuario);
 
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+        public static Venta ObtenerVenta(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("SELECT * FROM Ventas WHERE Id = @Id", connection);
+                command.Parameters.AddWithValue("@Id", id);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    return new Venta
+                    {
+                        Id = (int)reader["Id"],
+                        Comentarios = reader["Comentarios"].ToString(),
+                        IdUsuario = (int)reader["IdUsuario"]
+                    };
+                }
+            }
+            return null;
+        }
         public static void ModificarVenta(Venta venta)
         {
             var existente = ObtenerVenta(venta.Id);
@@ -33,13 +73,14 @@ namespace SistemaGestionData
                 existente.IdUsuario = venta.IdUsuario;
             }
         }
-
         public static void EliminarVenta(int id)
         {
-            var venta = ObtenerVenta(id);
-            if (venta != null)
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                ventas.Remove(venta);
+                string query = "DELETE FROM Ventas WHERE Id = @Id";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Id", id);
+
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿namespace SistemaGestionEntities
+﻿
+namespace SistemaGestionEntities
 {
     public class Usuario
     {
@@ -19,5 +20,11 @@
             set { _contraseña = value; }
         }
         public string Mail { get; set; }
+    }
+
+    public class LoginRequest
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

@@ -6,29 +6,55 @@ namespace SistemaGestionBusiness
 {
     public static class UsuarioBusiness
     {
-        public static Usuario ObtenerUsuario(int id)
+        public static Usuario TraerUsuario(int id)
         {
             return UsuarioData.ObtenerUsuario(id);
         }
-
         public static List<Usuario> ListarUsuarios()
         {
             return UsuarioData.ListarUsuarios();
         }
-
-        public static void CrearUsuario(Usuario usuario)
+        public static bool CrearUsuario(Usuario nuevoUsuario)
         {
-            UsuarioData.CrearUsuario(usuario);
+            try
+            {
+                UsuarioData.CrearUsuario(nuevoUsuario);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool ModificarUsuario(int id, Usuario usuarioModificado)
+        {
+            try
+            {
+                usuarioModificado.Id = id;
+                UsuarioData.ModificarUsuario(usuarioModificado);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool EliminarUsuario(int id)
+        {
+            try
+            {
+                UsuarioData.EliminarUsuario(id);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public static void ModificarUsuario(Usuario usuario)
+        public static Usuario ValidarCredenciales(string username, string password)
         {
-            UsuarioData.ModificarUsuario(usuario);
-        }
-
-        public static void EliminarUsuario(int id)
-        {
-            UsuarioData.EliminarUsuario(id);
+            return UsuarioData.ObtenerUsuarioPorCredenciales(username, password);
         }
     }
 }
