@@ -10,6 +10,10 @@ namespace SistemaGestionBusiness
         {
             return UsuarioData.ObtenerUsuario(id);
         }
+        public static Usuario ObtenerUsuario(int id)
+        {
+            return UsuarioData.ObtenerUsuario(id);
+        }
         public static List<Usuario> ListarUsuarios()
         {
             return UsuarioData.ListarUsuarios();
@@ -51,7 +55,6 @@ namespace SistemaGestionBusiness
                 return false;
             }
         }
-
         public static Usuario ValidarCredenciales(string username, string password)
         {
             return UsuarioData.ObtenerUsuarioPorCredenciales(username, password);

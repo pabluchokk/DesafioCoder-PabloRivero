@@ -1,0 +1,16 @@
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\bin\Debug\net8.0\SistemaGestionData.deps.json
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\bin\Debug\net8.0\SistemaGestionData.dll
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\bin\Debug\net8.0\SistemaGestionData.pdb
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\bin\Debug\net8.0\SistemaGestionEntities.dll
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\bin\Debug\net8.0\SistemaGestionEntities.pdb
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\SistemaGestionData.csproj.AssemblyReference.cache
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\SistemaGestionData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\SistemaGestionData.AssemblyInfoInputs.cache
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\SistemaGestionData.AssemblyInfo.cs
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\SistemaGestionData.csproj.CoreCompileInputs.cache
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\SistemaGestionData.sourcelink.json
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\SistemaG.92EE484C.Up2Date
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\SistemaGestionData.dll
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\refint\SistemaGestionData.dll
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\SistemaGestionData.pdb
+C:\Users\Pablo\source\repos\PreEntrega1\SistemaGestionData\obj\Debug\net8.0\ref\SistemaGestionData.dll

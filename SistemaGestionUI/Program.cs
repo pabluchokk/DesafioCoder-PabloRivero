@@ -172,7 +172,7 @@ namespace SistemaGestionUI
                     string mail = Console.ReadLine();
                     if (!string.IsNullOrWhiteSpace(mail)) usuario.Mail = mail;
 
-                    UsuarioBusiness.ModificarUsuario(usuario);
+                    UsuarioBusiness.ModificarUsuario(id, usuario);
                     Console.WriteLine("Usuario modificado correctamente.");
                 }
                 else

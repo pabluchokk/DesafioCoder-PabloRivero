@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaGestionBussiness", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaGestionUI", "SistemaGestionUI\SistemaGestionUI.csproj", "{241FADB3-EB7B-4AD0-B4DB-D338B2389460}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaGestionAPI", "SistemaGestionAPI\SistemaGestionAPI.csproj", "{4888C5C5-952C-4933-98D2-544212E671FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaGestionAPI", "SistemaGestionAPI\SistemaGestionAPI.csproj", "{4888C5C5-952C-4933-98D2-544212E671FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -59,10 +59,10 @@ public class ProductoController : ControllerBase
     }
 
     [HttpGet("ObtenerProducto/{id}")]
-    public IActionResult ObtenerProducto(int id)
+    [HttpGet("ObtenerProductos")]
+    public IActionResult ObtenerProductos()
     {
-        var producto = ProductoData.ObtenerProducto(id);
-        if (producto == null) return NotFound("Producto no encontrado.");
-        return Ok(producto);
+        var productos = ProductoData.ListarProductos();
+        return Ok(productos);
     }
 }
